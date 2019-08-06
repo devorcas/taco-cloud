@@ -1,2 +1,21 @@
-server:
-  port: 9090
+
+logging:
+  level:
+    taco: DEBUG
+
+taco:
+  orders:
+    page-size: 20
+
+---
+spring:
+  profiles: prod
+
+  datasource:
+    url: jdbc:mysql://localhost/tacocloud
+    username: tacodb
+    password: tacopassword
+
+logging:
+  level:
+    taco: WARN
