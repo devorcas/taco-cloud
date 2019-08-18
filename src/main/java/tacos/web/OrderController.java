@@ -32,8 +32,9 @@ public class OrderController {
     private OrderProps orderProps;
 
     @Autowired
-    public OrderController(OrderRepository orderRepo) {
+    public OrderController(OrderRepository orderRepo, OrderProps orderProps) {
         this.orderRepo = orderRepo;
+        this.orderProps = orderProps;
     }
 
     @GetMapping("/current")
