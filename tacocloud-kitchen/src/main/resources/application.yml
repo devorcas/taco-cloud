@@ -1,0 +1,11 @@
+spring:
+  profiles: jms-template, jms-listener
+
+  jms:
+    template:
+      default-destination: tacocloud.order.queue
+  artemis:
+    host: localhost
+    port: 16616
+    user: test
+    password: test
